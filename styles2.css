@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(assets/7009416-superficie-branca-textura-papel-fundo-abstrato-foto.jpg);
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.texto1{
+    margin: 30px;
+    position: relative;
+        & p{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        & .destaquered{
+            color: red;
+        }
+        & .destaquecoracao{
+            font-size: 40px;
+        }
+
+}
+
+.img-destaque{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    & img{
+        width: 300px;
+        border: solid white 10px;
+    }
+}
+
+img{
+    width: 200px;
+}
+
+.carousel-inner{
+    display: flex;
+}
+
+.img2, .img1, .img3{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+        & div{
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            border: solid white 3px;
+        }
+        & .img2-1{
+            background-image: url(assets/a1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        & .img2-2{
+            background-image: url(assets/16.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        & .img1-1{
+            background-image: url(assets/dodia.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        & .img3-1{
+            background-image: url(assets/alfa.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+}
+
+.gallery-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    & img{
+        width: 300px;
+        border-radius: 50px;
+        border: solid white 5px;
+    }
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    & button{
+        padding: 20px 40px;
+        margin-bottom: 50px;
+        border-radius: 30px;
+        border: solid red;
+        background-color: rgba(141, 2, 2, 0.664);
+        font-size: 20px;
+        color: white;
+    }
+}

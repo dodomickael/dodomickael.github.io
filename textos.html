@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="assets/Raimundos - Mulher de Fases (Clipe Oficial).mp3" type="audio/mpeg">
+      </audio>
+    <div class="img-destaque"><img src="assets/ali.jpg" alt=""></div>
+    <div class="texto1">
+        <p>Querido amor da minha vida,</p>
+
+        <p>Dedico esta carta a você, com todo o meu coração ❤️. Meu amor, nem sei por onde começar, pois não sou muito bom em expressar meus sentimentos através de palavras 😅. Mesmo que soubesse, ainda faltariam palavras para descrever tudo o que sinto por você.</p>
+
+        <div class="img1">
+            <div class="img1-1"></div>
+        </div>
+
+        <p>
+        Hoje celebramos um dia incrível em nossas vidas: um ano de noivado! Há 365 dias, no dia <span class="destaquered">10/06/23</span>, na suíte lounge, eu estava nervoso e com medo da sua resposta. Te pedi em casamento, e você disse "<span class="destaquered">sim</span>". Naquele momento, comecei a chorar, não consegui me segurar. Foi uma mistura de nervosismo, ansiedade e, principalmente, uma alegria imensa que explodia 💥 no peito por você ter aceitado compartilhar um futuro ao meu lado. 😍</p>
+
+        <div class="img2">
+            <div class="img2-1"></div>
+            <div class="img2-2"></div>
+        </div>
+
+        <p>Quando olho para trás, lembro do dia em que nos conhecemos, dos risos 😆 que compartilhamos e das lágrimas que enxugamos juntos 😭😭. Apesar das brigas e dos desafios que enfrentamos ao longo de nossa jornada, cada obstáculo nos fortaleceu. Quero dizer que sou <span class="destaquered">muito</span> grato por tê-la ao meu lado e por desfrutar de todos os momentos de nossas vidas, sejam eles bons ou ruins. Ainda não fizemos nossos votos, mas para mim já é assim: na alegria e na tristeza, na saúde e na doença, por todos os dias de nossas vidas, até que a ****** <span class="destaquered">ATÉ QUE NADA POR QUE NEM A MORTE VAI NOS SEPARAR VIU??? 🧐</span>.</p>
+
+        <p>Nosso amor cresceu de maneiras que eu nunca poderia ter imaginado. Seu sorriso 😬 ilumina meus dias e seu carinho me conforta nos momentos mais difíceis. Você é meu <span class="destaquered">porto seguro</span>, minha melhor amiga, namorada, amante, meu grande amor 🥰 você é meu tudinho. Sem você, <span class="destaqueback">meus dias perderiam vida, perderiam cor e seriam um grande vazio sem graça 😶.</span></p>
+
+        <p>Neste um ano de noivado 💍, quero agradecer por cada segundo, cada beijo 😘, cada abraço e cada palavra de encorajamento. Quero prometer continuar a te amar com todo o meu coração ❤️, a te apoiar em todos os teus sonhos e a construir um futuro brilhante ✨ ao teu lado. Vamos fazer muita grana 💰 e depois aproveitar, viajar bastante, fazer nossa casa e a casinha da Alfa 🐾, ou comprar um sofá pra ela mesmo, porque né, 😂😂😂.</p>
+
+        <div class="img3">
+            <div class="img3-1"></div>
+        </div>
+
+        <p>Mas é isso, amor. Estamos apenas no começo desta jornada 🚀 e não sabemos o que está por vir, mas espero que nosso amor 😍 continue a crescer e florescer, trazendo-nos ainda mais felicidade e tudo de bom. Como já disse antes, te amo ❤️ mais do que palavras podem expressar e sou eternamente grato por ter você em minha vida 👩‍❤️‍👨. Feliz primeiro ano de noivado, meu amor 🥳! Que venham muitos mais anos cheios de amor 🥰, alegria e aventuras juntos.</p>
+
+        <p>Com todo o meu amor,</p>
+
+        <p><span class="destaquered">Seu amorzinho ❤️</span></p>
+    </div>
+
+<div class="gallery-container">
+  <div class="image-container">
+    <img id="galleryImage" src="" alt="Imagem da Galeria">
+
+  </div>
+  </div>
+
+  <div class="button-container">
+    <button id="prevButton" onclick="prevImage()">Anterior</button>
+    <button id="nextButton" onclick="nextImage()">Próxima</button>
+  </div>
+
+
+<script>
+    const images = ["assets/vesguin.jpg", "assets/1.jpg", "assets/2.jpg", "assets/3.jpg", "assets/4.jpg", "assets/5.jpg", "assets/6.jpg", "assets/7.jpg","assets/8.jpg","assets/9.jpg","assets/10.jpg","assets/11.jpg","assets/12.jpg", "assets/13.jpg", "assets/14.jpg","assets/15.jpg","assets/16.jpg","assets/17.jpg","assets/18.jpg","assets/19.jpg","assets/20.jpg","assets/21.jpg","assets/22.jpg","assets/23.jpg","assets/24.jpg","assets/25.jpg","assets/26.jpg","assets/27.jpg","assets/28.jpg","assets/29.jpg","assets/30.jpg","assets/31.jpg","assets/32.jpg","assets/33.jpg","assets/34.jpg","assets/35.jpg","assets/36.jpg","assets/37.jpg","assets/38.jpg","assets/39.jpg","assets/40.jpg",]; // Adicione aqui os caminhos das suas imagens
+    let currentIndex = 0;
+  
+    function updateImage() {
+      document.getElementById("galleryImage").src = images[currentIndex];
+      document.getElementById("prevButton").disabled = currentIndex === 0;
+      document.getElementById("nextButton").disabled = currentIndex === images.length - 1;
+    }
+  
+    function prevImage() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateImage();
+        console.log(currentIndex)
+      }
+    }
+  
+    function nextImage() {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateImage();
+        console.log(currentIndex)
+      }
+    }
+  
+    // Inicializar o estado dos botões
+    updateImage();
+  </script>
+
+</body>
+</html>

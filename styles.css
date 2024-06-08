@@ -1,0 +1,79 @@
+body{
+
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+        background-image: url(assets/papel-de-parede-casual-coracoes-do-amor-papel-de-parede-pedra.webp);
+
+      
+}
+.divcoracao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.divcoracao{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #c90202;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+        & .aomeuamor{
+            transform: rotate(45deg);
+            position: absolute;
+            left: -40px;
+            bottom: 10px;
+            width: 200px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            text-shadow: black 1px 5px;
+            text-decoration: none;
+            line-height: 50px;
+            padding: 60px;
+            border-radius: 100px;
+        }
+
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #c90202;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.heart::before {
+    top: -100px;
+    left: 0;
+}
+
+.heart::after {
+    left: 100px;
+    top: 0;
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+}

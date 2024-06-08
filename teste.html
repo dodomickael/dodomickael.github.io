@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button-container button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <div class="image-container">
+    <img id="galleryImage" src="" alt="Imagem da Galeria">
+
+  </div>
+  <div class="button-container">
+    <button id="prevButton" onclick="prevImage()">Anterior</button>
+    <button id="nextButton" onclick="nextImage()">Próxima</button>
+  </div>
+</div>
+
+<script>
+  const images = ["assets/vesguin.jpg", "assets/1.jpg", "assets/2.jpg", "assets/3.jpg", "assets/4.jpg", "assets/5.jpg", "assets/6.jpg", "assets/7.jpg","assets/8.jpg","assets/9.jpg","assets/10.jpg","assets/11.jpg","assets/12.jpg", "assets/13.jpg", "assets/14.jpg","assets/15.jpg"]; // Adicione aqui os caminhos das suas imagens
+  let currentIndex = 0;
+
+  function updateImage() {
+    document.getElementById("galleryImage").src = images[currentIndex];
+    document.getElementById("prevButton").disabled = currentIndex === 0;
+    document.getElementById("nextButton").disabled = currentIndex === images.length - 1;
+  }
+
+  function prevImage() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateImage();
+      console.log(currentIndex)
+    }
+  }
+
+  function nextImage() {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      updateImage();
+      console.log(currentIndex)
+    }
+  }
+
+  // Inicializar o estado dos botões
+  updateImage();
+</script>
+
+</body>
+</html>
