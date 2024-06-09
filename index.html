@@ -11,13 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <audio autoplay loop>
+    <audio id="background-audio" loop>
         <source src="assets/Som do coração_ Percepção sonora.mp3" type="audio/mpeg">
-      </audio>
+        Your browser does not support the audio element.
+    </audio>
     <div class="divcoracao">
         <div class="heart">  
             <a class="aomeuamor" href="textos.html">Ao meu amor</a>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('background-audio');
+            audio.play().catch(function(error) {
+                console.log('Autoplay failed:', error);
+            });
+        });
+    </script>
 </body>
 </html>
